@@ -8,9 +8,15 @@ class App extends Component {
   render (){
     return (
       <Router>
-        <WelcomeContainer />
-
+      <Fragment>
+      <Switch>
+        <Route path="/welcome" component= {WelcomeContainer} />
+        <Route path="/game" component={GameContainer} />
+        </Switch>
+      </Fragment>
       </Router>
+
+
     );
   }
 
