@@ -20,3 +20,9 @@
 .App-link {
   color: #09d3ac;
 }
+
+canvas {
+  border-style: solid;
+  background-color: #ffffff;
+  border-radius: 10px;
+}

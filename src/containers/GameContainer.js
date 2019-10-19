@@ -6,7 +6,7 @@ import GameTable from '../components/GameTable';
 const GameContainer = (props) => {
   return (
     <Fragment>
-      <ScoreBar />
+      
       <GameTable />
     </Fragment>
   )
