@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import ScoreBar from '../components/ScoreBar';
+import GameTable from '../components/GameTable';
 
-const GameContainer = () => {
 
-
+const GameContainer = (props) => {
   return (
-    <p>Gametime</p>
+    <Fragment>
+      <ScoreBar />
+      <GameTable />
+    </Fragment>
   )
 }
 
