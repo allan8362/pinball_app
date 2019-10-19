@@ -36,7 +36,6 @@ class Canvas extends Component {
 
   //Game Grid
 
-
   function collisionDetection() {
     for(let c=0; c<canvas.height; c++) {
       for(let r=0; r<canvas.width; r++) {
@@ -93,7 +92,8 @@ class Canvas extends Component {
 
     collisionDetection();
 
-    if(ballX + dx > canvas.width-ballRadius || ballX + dx < ballRadius) {
+    // Code to check when ball hits top/bottom/sides
+    if(ballX + dx > canvas.width-21-ballRadius || ballX + dx < ballRadius) {
       dx = -dx;
     }
     if(ballY + dy < ballRadius) {
@@ -104,9 +104,12 @@ class Canvas extends Component {
         dy = -dy;
       }
     }
+    // End of code to check when ball hits top/bottom/sides
 
+    // Normal ball movement update
     ballX += dx;
     ballY += dy;
+    // end of normal ball update
   }
 
   let interval = setInterval(draw, 10);
