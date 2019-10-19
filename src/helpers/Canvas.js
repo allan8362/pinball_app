@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import DrawMove from './DrawMove';
 import '../App.css';
 
 class Canvas extends Component {
@@ -77,15 +78,7 @@ class Canvas extends Component {
   }
 
 
-  //pin ball
-  function drawBall() {
-    ctx.beginPath();
-    ctx.arc(ballX, ballY, ballRadius, 0, Math.PI*2);
-    ctx.fillStyle = "#C0C0C0";
-    ctx.fill();
-    ctx.closePath();
-    ctx.stroke();
-  }
+
 
 
   //bar to release the ball
@@ -150,20 +143,6 @@ class Canvas extends Component {
     ctx.stroke();
     ctx.closePath();
 
-    // // left verticle line
-    // ctx.beginPath();
-    // ctx.moveTo(21, 450);
-    // ctx.lineTo(21, 650);
-    // ctx.stroke();
-    // ctx.closePath();
-
-    //inner left verticle line
-    // ctx.beginPath();
-    // ctx.moveTo(42, 500);
-    // ctx.lineTo(42, 450);
-    // ctx.stroke();
-    // ctx.closePath();
-    //
     //inner left diag line - under left flipper
     ctx.beginPath();
     ctx.moveTo(100, 650);
@@ -171,26 +150,6 @@ class Canvas extends Component {
     ctx.stroke();
     ctx.closePath();
 
-    // //bottom horizontal line
-    // ctx.beginPath();
-    // ctx.moveTo(21, 610);
-    // ctx.lineTo(379, 610);
-    // ctx.stroke();
-    // ctx.closePath();
-    //
-    // //middle verticle line
-    // ctx.beginPath();
-    // ctx.moveTo(200, 000);
-    // ctx.lineTo(200, 650);
-    // ctx.stroke();
-    // ctx.closePath();
-    //
-    // //middle horizontal line
-    // ctx.beginPath();
-    // ctx.moveTo(400, 325);
-    // ctx.lineTo(0, 325);
-    // ctx.stroke();
-    // ctx.closePath();
   }
 
   function drawCornerLines() {
@@ -259,130 +218,19 @@ class Canvas extends Component {
     ctx.stroke();
   }
 
-  // function drawBumpers() {
-  //   //right bottom bumper
-  //   ctx.beginPath();
-  //   ctx.moveTo(358, 300);
-  //   ctx.lineTo(299, 410);
-  //   ctx.lineTo(358, 400);
-  //   // ctx.fillStyle = "#C0C0C0";
-  //   // ctx.fill();
-  //   ctx.closePath();
-  //   ctx.stroke();
-  //
-  //   //left bottom bumper
-  //   ctx.beginPath();
-  //   ctx.moveTo(42, 300);
-  //   ctx.lineTo(101, 410);
-  //   ctx.lineTo(42, 400);
-  //   // ctx.fillStyle = "#C0C0C0";
-  //   // ctx.fill();
-  //   ctx.closePath();
-  //   ctx.stroke();
-  //
-  //   //top left corner bumper
-  //   ctx.beginPath();
-  //   ctx.moveTo(50, 0);
-  //   ctx.lineTo(0, 50);
-  //   // ctx.fillStyle = "#C0C0C0";
-  //   // ctx.fill();
-  //   ctx.closePath();
-  //   ctx.stroke();
-  //
-  //   //middle left bumper
-  //   ctx.beginPath();
-  //   ctx.moveTo(50, 110);
-  //   ctx.lineTo(0, 100);
-  //   ctx.lineTo(0, 200);
-  //   ctx.lineTo(50, 190);
-  //   // ctx.fillStyle = "#C0C0C0";
-  //   // ctx.fill();
-  //   ctx.closePath();
-  //   ctx.stroke();
-  //
-  //
-  //   //middle right bumper
-  //   ctx.beginPath();
-  //   ctx.moveTo(350, 110);
-  //   ctx.lineTo(379, 100);
-  //   ctx.lineTo(379, 250);
-  //   ctx.lineTo(360, 210);
-  //   // ctx.fillStyle = "#C0C0C0";
-  //   // ctx.fill();
-  //   ctx.closePath();
-  //   ctx.stroke();
 
-    // //circle bumpers
-    // //circle bumper1 - top left
-    // let centerX = canvas.width / 3;
-    // let centerY = canvas.height / 5;
-    // let radius = 15;
-    //
-    // ctx.beginPath();
-    // ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-    // // ctx.fillStyle = "#C0C0C0";
-    // // ctx.fill();
-    // ctx.closePath();
-    // ctx.stroke();
-    //
-    // //circle bumper2 - top middle
-    // let center2X = canvas.width / 2;
-    // let center2Y = canvas.height / 5;
-    // let radius2 = 15;
-    //
-    // ctx.beginPath();
-    // ctx.arc(center2X, center2Y, radius2, 0, 2 * Math.PI, false);
-    // // ctx.fillStyle = "#C0C0C0";
-    // // ctx.fill();
-    // ctx.closePath();
-    // ctx.stroke();
-    //
-    // //circle bumper3 - top right
-    // let center3X = canvas.width / 1.5;
-    // let center3Y = canvas.height / 5;
-    // let radius3 = 15;
-    //
-    // ctx.beginPath();
-    // ctx.arc(center3X, center3Y, radius2, 0, 2 * Math.PI, false);
-    // // ctx.fillStyle = "#C0C0C0";
-    // // ctx.fill();
-    // ctx.closePath();
-    // ctx.stroke();
-    //
-    // //circle bumper4 - bottom left
-    // let center4X = canvas.width / 2.3;
-    // let center4Y = canvas.height / 3.5;
-    // let radius4 = 15;
-    //
-    // ctx.beginPath();
-    // ctx.arc(center4X, center4Y, radius2, 0, 2 * Math.PI, false);
-    // // ctx.fillStyle = "#C0C0C0";
-    // // ctx.fill();
-    // ctx.closePath();
-    // ctx.stroke();
-    //
-    // //circle bumper5 - bottom right
-    // let center5X = canvas.width / 1.7;
-    // let center5Y = canvas.height / 3.5;
-    // let radius5 = 15;
-    //
-    // ctx.beginPath();
-    // ctx.arc(center5X, center5Y, radius5, 0, 2 * Math.PI, false);
-    // // ctx.fillStyle = "#C0C0C0";
-    // // ctx.fill();
-    // ctx.closePath();
-    // ctx.stroke();
+
 
 
 
     ctx.lineWidth = 2.5;
     ctx.strokeStyle = "#000000";
 
-  // }
 
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
+    const drawRequest = new DrawMove();
+    drawRequest.drawBall(ballX, ballY, ballRadius);
     drawBallReleaseBar();
     drawTriangle();
     drawLines();
